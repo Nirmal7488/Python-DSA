@@ -29,3 +29,14 @@ class Deque(list):
             raise IndexError("Deque Underflow")
     def size(self):
         return len(self)
+
+d1=Deque()
+d1.insert_front(6)
+d1.insert_front(8)
+d1.insert_rear(3)
+d1.insert_rear(4)
+d1.delete_front()
+d1.delete_rear()
+print(d1.get_front())
+print(d1.get_rear())
+print(d1.size())

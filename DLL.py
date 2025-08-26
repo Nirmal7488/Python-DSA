@@ -116,12 +116,12 @@ class DLLIterator:
 
 
 
-myList = DLL()
-myList.addAtBeg(4)
-myList.addAtBeg(5)
-myList.addAtEnd(2)
-myList.addAfter(myList.search(2),8)
-myList.addAfter(myList.search(4),7)
+# myList = DLL()
+# myList.addAtBeg(4)
+# myList.addAtBeg(5)
+# myList.addAtEnd(2)
+# myList.addAfter(myList.search(2),8)
+# myList.addAfter(myList.search(4),7)
 # myList.delAtBeg()
 # myList.delAtEnd()
 # myList.delItem(7)
@@ -133,5 +133,5 @@ myList.addAfter(myList.search(4),7)
 
 
 # myList.traverse()
-for i in myList:
-    print(i,end=" ")
+# for i in myList:
+#     print(i,end=" ")

@@ -1,40 +1,38 @@
-#Implementation of Deque by using doubly linked list class
+
 from DLL import *
 
-class Deque:
+class Deque(DLL):
     def __init__(self):
-        self.items=DLL()
         self.count=0
+        super().__init__()
     def is_empty(self):
-        return self.items.isEmpty()
+        return self.isEmpty()
     def insert_front(self,data):
-        self.items.addAtBeg(data)
+        self.addAtBeg(data)
         self.count+=1
-
     def insert_rear(self,data):
-        self.items.addAtEnd(data)
+        self.addAtEnd(data)
         self.count+=1
-
     def delete_front(self):
         if not self.is_empty():
-            self.items.delAtBeg()
+            self.delAtBeg()
             self.count-=1
         else:
             raise IndexError("Deque Underflow")
     def delete_rear(self):
         if not self.is_empty():
-            self.items.delAtEnd()
+            self.delAtEnd()
             self.count-=1
         else:
             raise IndexError("Deque Underflow")
     def get_front(self):
         if not self.is_empty():
-            return self.items.Start.item
+            return self.Start.item
         else:
             raise IndexError("Deque Underflow")
     def get_rear(self):
         if not self.is_empty():
-            temp=self.items.Start
+            temp=self.Start
             while temp.next is not None:
                 temp=temp.next
             return temp.item
@@ -42,16 +40,14 @@ class Deque:
             raise IndexError("Deque Underflow")
     def size(self):
         return self.count
-
+    
 d1=Deque()
+d1.insert_front(5)
 d1.insert_front(7)
-d1.insert_front(9)
-d1.insert_rear(4)
 d1.insert_rear(1)
+d1.insert_rear(9)
 d1.delete_front()
 d1.delete_rear()
 
-print("front :",d1.get_front())
-print("rear :",d1.get_rear())
-print(d1.size())
-    
+print("front:",d1.get_front())
+print("rear:",d1.get_rear())
